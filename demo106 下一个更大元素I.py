@@ -4,7 +4,7 @@ def nextGreaterElement(nums1, nums2):
     res_dict = {i: -1 for i in nums2}
     stack = []
     for i in nums2:
-        if stack and i > stack[-1]:
+        while stack and i > stack[-1]:
             res_dict[stack.pop()] = i  # 保存的是对应关系
         stack.append(i)
     res = []
@@ -13,7 +13,7 @@ def nextGreaterElement(nums1, nums2):
     return res
 
 
-nums1 = [3, 1, 5, 7, 9, 2, 6]
-nums2 = [1, 2, 3, 5, 6, 7, 9, 11]
+nums1 = [1,3,5,2,4]
+nums2=[6,5,4,3,2,1,7]
 # nums2 = [1,3,4,2]
 print(nextGreaterElement(nums1, nums2))
