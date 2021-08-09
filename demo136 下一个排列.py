@@ -5,7 +5,7 @@ def nextPermutation(nums):
     while i >= 0 and nums[i] >= nums[i + 1]:
         i -= 1
 
-    if i > 0:
+    if i >= 0:
         j = len(nums) - 1
         while j >= 0 and nums[i] >= nums[j]:
             j -= 1
@@ -20,5 +20,5 @@ def nextPermutation(nums):
     return nums
 
 
-nums = [1,1,5]
+nums = [1,2]
 print(nextPermutation(nums))
