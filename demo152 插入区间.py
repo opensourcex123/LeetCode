@@ -26,6 +26,8 @@ def insert(intervals, newInterval):
         else:
             left = min(li, left)
             right = max(ri, right)
+    if not placed:
+        res.append([left, right])
     return res
 
 
